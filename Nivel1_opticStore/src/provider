@@ -1,0 +1,65 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "address",
+      "fax",
+      "name",
+      "NIF",
+      "phone"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "address": {
+        "bsonType": "object",
+        "properties": {
+          "city": {
+            "bsonType": "string"
+          },
+          "country": {
+            "bsonType": "string"
+          },
+          "door": {
+            "bsonType": "string"
+          },
+          "floor": {
+            "bsonType": "string"
+          },
+          "number": {
+            "bsonType": "string"
+          },
+          "postalCode": {
+            "bsonType": "string"
+          },
+          "street": {
+            "bsonType": "string"
+          }
+        },
+        "required": [
+          "city",
+          "country",
+          "door",
+          "floor",
+          "number",
+          "postalCode",
+          "street"
+        ]
+      },
+      "fax": {
+        "bsonType": "string"
+      },
+      "name": {
+        "bsonType": "string"
+      },
+      "NIF": {
+        "bsonType": "string"
+      },
+      "phone": {
+        "bsonType": "string"
+      }
+    }
+  }
+}

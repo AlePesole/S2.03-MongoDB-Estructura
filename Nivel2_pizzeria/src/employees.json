@@ -1,0 +1,38 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "name",
+      "surname",
+      "NIF",
+      "phoneNumber",
+      "role",
+      "stores_id"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "name": {
+        "bsonType": "string"
+      },
+      "surname": {
+        "bsonType": "string"
+      },
+      "NIF": {
+        "bsonType": "string"
+      },
+      "phoneNumber": {
+        "bsonType": "string"
+      },
+      "role": {
+        "bsonType": "string",
+        "enum": ["chef", "delivery"]
+      },
+      "stores_id": {
+        "bsonType": "objectId"
+      }
+    }
+  }
+}

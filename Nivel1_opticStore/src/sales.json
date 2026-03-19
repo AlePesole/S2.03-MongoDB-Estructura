@@ -1,0 +1,37 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "customers_id",
+      "employee_id",
+      "glasses_id",
+      "saleDate",
+      "total_price"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "customers_id": {
+        "bsonType": "objectId"
+      },
+      "employee_id": {
+        "bsonType": "objectId"
+      },
+      "glasses_id": {
+        "bsonType": "array",
+        "minItems": 1,
+        "items": {
+          "bsonType": "objectId"
+        }
+      },
+      "saleDate": {
+        "bsonType": "date"
+      },
+      "total_price": {
+        "bsonType": "int"
+      }
+    }
+  }
+}

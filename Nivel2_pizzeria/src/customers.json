@@ -1,0 +1,49 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "name",
+      "surname",
+      "address",
+      "phoneNumber"
+    ],
+    "properties": {
+    "_id": {
+        "bsonType": "objectId"
+      },
+      "name": {
+        "bsonType": "string"
+      },
+      "surname": {
+        "bsonType": "string"
+      },
+      "address": {
+        "bsonType": "object",
+        "required": [
+          "street",
+          "postalCode",
+          "city",
+          "province"
+        ],
+        "properties": {
+          "street": {
+            "bsonType": "string"
+          },
+          "postalCode": {
+            "bsonType": "string"
+          },
+          "city": {
+            "bsonType": "string"
+          },
+          "province": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "phoneNumber": {
+        "bsonType": "string"
+      }
+    }
+  }
+}

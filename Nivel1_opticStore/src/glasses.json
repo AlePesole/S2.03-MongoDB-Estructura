@@ -1,0 +1,68 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "brand",
+      "frame",
+      "glass_left",
+      "glass_right",
+      "price",
+      "provider_id"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "brand": {
+        "bsonType": "string"
+      },
+      "frame": {
+        "bsonType": "object",
+        "properties": {
+          "color": {
+            "bsonType": "string"
+          },
+          "type": {
+            "bsonType": "string",
+            "enum": ["rimless", "plastic", "metal"],
+            "description":
+              "Frame type must be one of the allowed values"
+          }
+        },
+        "required": ["color", "type"]
+      },
+      "glass_left": {
+        "bsonType": "object",
+        "properties": {
+          "color": {
+            "bsonType": "string"
+          },
+          "prescription": {
+            "bsonType": "double"
+          }
+        },
+        "required": ["color", "prescription"]
+      },
+      "glass_right": {
+        "bsonType": "object",
+        "properties": {
+          "color": {
+            "bsonType": "string"
+          },
+          "prescription": {
+            "bsonType": "double"
+          }
+        },
+        "required": ["color", "prescription"]
+      },
+      "price": {
+        "bsonType": "double",
+        "minimum": 0
+      },
+      "provider_id": {
+        "bsonType": "objectId"
+      }
+    }
+  }
+}

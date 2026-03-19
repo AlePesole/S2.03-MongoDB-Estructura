@@ -1,0 +1,37 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "name",
+      "description",
+      "image_url",
+      "price",
+      "type"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "name": {
+        "bsonType": "string"
+      },
+      "description": {
+        "bsonType": "string"
+      },
+      "image_url": {
+        "bsonType": "string"
+      },
+      "category_pizza": {
+        "bsonType": "string"
+      },
+      "price": {
+        "bsonType": "double"
+      },
+      "type": {
+        "bsonType": "string",
+        "enum": ["pizza", "bebida", "hamburguesa"]
+      }
+    }
+  }
+}

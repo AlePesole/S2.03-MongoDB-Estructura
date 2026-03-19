@@ -1,0 +1,66 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "stores_id",
+      "customers_id",
+      "type",
+      "orderDate",
+      "products_id"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "stores_id": {
+        "bsonType": "objectId"
+      },
+      "driver_id": {
+        "bsonType": "objectId"
+      },
+      "customers_id": {
+        "bsonType": "objectId"
+      },
+      "type": {
+        "bsonType": "string",
+        "enum": ["delivery", "pickup"]
+      },
+      "orderDate": {
+        "bsonType": "date"
+      },
+      "deliveredDate": {
+        "bsonType": "date"
+      },
+      "products_id": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "objectId"
+        }
+      },
+      "address": {
+        "bsonType": "object",
+        "required": [
+          "street",
+          "postalCode",
+          "city",
+          "province"
+        ],
+        "properties": {
+          "street": {
+            "bsonType": "string"
+          },
+          "postalCode": {
+            "bsonType": "string"
+          },
+          "city": {
+            "bsonType": "string"
+          },
+          "province": {
+            "bsonType": "string"
+          }
+        }
+      }
+    }
+  }
+}
